@@ -3,20 +3,10 @@
 import SongContextMenu from '@/@shared/SongContextMenu';
 import Card from '@/components/Card';
 import CardRow from '@/components/CardRow';
-import { Playlist, usePlayer } from '@/contexts/player.context';
-import { processGreeting } from '@/utils/messages.utils';
+import { usePlayer } from '@/contexts/player.context';
+import { processGreeting, processSongText } from '@/utils/messages.utils';
 import { PlayIcon } from 'lucide-react';
 import { useEffect, useRef } from 'react';
-
-function processSongText(playlist: Playlist){
-	const SONG_TEXTS = {
-		'0': '0 Songs',
-		'1': '1 song',
-		DEFAULT: `${playlist.songs.length} songs` 
-	};
-
-	return SONG_TEXTS[(String(playlist.songs.length) as keyof typeof SONG_TEXTS)] ?? SONG_TEXTS['DEFAULT'];
-}
 
 export default function Home() {
 	const {
