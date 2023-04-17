@@ -4,7 +4,7 @@ import SongContextMenu from '@/@shared/SongContextMenu';
 import Card from '@/components/Card';
 import CardRow from '@/components/CardRow';
 import { Playlist, usePlayer } from '@/contexts/player.context';
-import { processGreeting } from '@/utils/date.utils';
+import { processGreeting } from '@/utils/messages.utils';
 import { PlayIcon } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
